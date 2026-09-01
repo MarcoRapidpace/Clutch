@@ -261,7 +261,7 @@
                                                             </tbody>
                                                         </table>
                                                     </td>
-                                                    <td valign="middle" style="padding-left: 12px; font-size: 14px; color: #E2E8F0; line-height: 145%;" class="esd-text">Claim your early access rewards and automatically earn Packs!</td>
+                                                    <td valign="middle" style="padding-left: 12px; font-size: 14px; color: #E2E8F0; line-height: 145%;" class="esd-text">Automatically earn Packs, just for participating — win or lose!</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -273,14 +273,14 @@
                 </tr><!-- 7. PRIMARY CTA BUTTON -->
                 <tr>
                     <td class="content-padding esd-text" align="center" style="padding: 4px 30px 26px 30px; background-color: #121E2C;">
-                        <table cellpadding="0" cellspacing="0" border="0" align="center" class=" cke_show_border">
+                        <table cellpadding="0" cellspacing="0" border="0" align="center">
                             <tbody>
                                 <tr>
-                                    <td align="center" style="background-color: #1090EA; border-radius: 12px;"><a href="https://www.clutch.app/en/#racing" target="_blank" rel="noopener noreferrer" style="background: #1090EA; color: #ffffff; border: 0; border-radius: 12px; font-weight: 800; font-size: 15px; display: inline-block; padding: 16px 48px; text-decoration: none; letter-spacing: 0.5px; text-transform: uppercase;">Enter Racing Beta → </a></td>
+                                    <td align="center" style="background-color: #1090EA; border-radius: 12px;"><a href="https://www.clutch.app/en/#racing" target="_blank" rel="noopener noreferrer" style="background: #1090EA; color: #ffffff; border: 0; border-radius: 12px; font-weight: 800; font-size: 15px; display: inline-block; padding: 16px 48px; text-decoration: none; letter-spacing: 0.5px; text-transform: uppercase;"> Enter Racing Beta → </a></td>
                                 </tr>
                             </tbody>
                         </table>
-                        <p style="font-size: 14px; color: #38bdf8; font-weight: 700; margin-top: 14px;">Good luck Kings! 👑</p>
+                        <p style="font-size: 14px; color: #38BDF8; font-weight: 700; text-align: center; margin-top: 14px;"> Good luck Kings! 👑 </p>
                     </td>
                 </tr><!-- 8. 24/7 SUPPORT BAR -->
                 <tr>
