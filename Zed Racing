@@ -7,7 +7,7 @@
     <meta name="x-apple-disable-message-reformatting">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="telephone=no" name="format-detection">
-    <title>Racing Beta is Live – Place Bets & Earn Ownership Packs!</title>
+    <title>Racing Open Beta is Live – Play Early & Get Rewarded!</title>
     <!--[if (mso 16)]> <style type="text/css"> a { text-decoration: none; } </style> <![endif]-->
     <!--[if gte mso 9]><style> sup { font-size: 100% !important; } </style><![endif]-->
     <!--[if gte mso 9]> <noscript> <xml> <o:OfficeDocumentSettings> <o:AllowPNG></o:AllowPNG> <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings> </xml> </noscript> <![endif]-->
@@ -75,46 +75,81 @@
                 padding-bottom: 10px !important;
             }
 
-            .method-item {
+            .split-col {
                 display: block !important;
                 width: 100% !important;
                 max-width: 100% !important;
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-                padding-bottom: 10px !important;
+                padding: 0 !important;
+            }
+
+            .split-col-img {
+                padding-bottom: 16px !important;
             }
         }
     </style>
 </head>
 
 <body style="margin: 0; padding: 0; background-color: #080D14; width: 100% !important;">
-    <div style="display: none; max-height: 0px; overflow: hidden; opacity: 0; font-size: 1px; line-height: 1px; color: #080D14;" class="esd-text"> Racing Beta is officially live on Clutch! Place your bets on virtual races and earn exclusive horse ownership Packs today. &nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌ </div>
+    <div style="display: none; max-height: 0px; overflow: hidden; opacity: 0; font-size: 1px; line-height: 1px; color: #080D14;" class="esd-text"> Clutch Racing Open Beta is officially live! Place your bets on virtual races, win cash, and earn rewards today. &nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌ </div>
     <div style="background-color: #080D14; width: 100%; padding: 25px 0;">
         <table class="email-container" cellpadding="0" cellspacing="0" border="0" align="center" width="600" style="max-width: 600px; width: 100%; margin: 0 auto; background-color: #121E2C; border-radius: 20px; overflow: hidden; box-shadow: 0px 16px 48px rgba(0,0,0,0.65);">
             <tbody>
                 <!-- 1. BRAND LOGO -->
                 <tr>
                     <td align="center" style="padding: 28px 20px 18px 20px; background-color: #121E2C;"><a target="_blank" href="https://clutch.app" rel="noopener noreferrer"><img src="https://edmzn.stripocdnplugin.email/content/509e2b7b4ebe4f66821f283d3da799d3/lib/pluginId_509e2b7b4ebe4f66821f283d3da799d3_email_1rrwn8sxv1/logo_3x_512Ive1uhsCGj3tZ.png" alt="Clutch" width="145" style="display: block; border: 0; margin: 0 auto;"></a></td>
-                </tr><!-- 2. HERO BANNER -->
+                </tr>
+                <!-- 2. HERO BANNER -->
                 <tr>
                     <td align="center" style="padding: 0 20px 18px 20px; background-color: #121E2C;">
                         <table cellpadding="0" cellspacing="0" border="0" width="100%">
                             <tbody>
                                 <tr>
-                                    <td align="center" style="font-size: 0px;"><a target="_blank" href="https://www.clutch.app/en/#racing" rel="noopener noreferrer"><img class="fluid-img" src="https://egxor.stripocdnplugin.email/content/6d3dac714f0b4ccebfa1032816a53a66/lib/pluginId_6d3dac714f0b4ccebfa1032816a53a66_email_8361203f-ea7f-4d40-9e01-2547a0e89440/zed.png" alt width="560" style="display: block; border-radius: 14px; border: 0; width: 100%; max-width: 560px; height: auto;"></a></td>
+                                    <td align="center" style="font-size: 0px;"><a target="_blank" href="https://www.clutch.app/en/#racing" rel="noopener noreferrer"><img class="fluid-img" src="https://egxor.stripocdnplugin.email/content/6d3dac714f0b4ccebfa1032816a53a66/lib/pluginId_6d3dac714f0b4ccebfa1032816a53a66_email_8361203f-ea7f-4d40-9e01-2547a0e89440/photo_20260903_083701.jpg" alt="Racing Open Beta Hero" width="560" style="display: block; border-radius: 14px; border: 0; width: 100%; max-width: 560px; height: auto;"></a></td>
                                 </tr>
                             </tbody>
                         </table>
                     </td>
-                </tr><!-- 3. TITLE & VALUE PROP COPY -->
+                </tr>
+                <!-- 3. TITLE & OPENING COPY -->
                 <tr>
                     <td class="content-padding esd-text" align="center" style="padding: 6px 36px 4px 36px; background-color: #121E2C;">
-                        <h1 style="color: #ffffff; font-size: 26px; line-height: 125%; font-weight: 800; letter-spacing: -0.4px; text-align: center; margin-top: 14px; margin-bottom: 12px;">Racing Beta is Officially Live!</h1>
-                        <p style="font-size: 15px; line-height: 155%; color: #e2e8f0; margin-bottom: 12px;">We are thrilled to unveil Clutch's brand-new racing platform.</p>
-                        <p style="font-size: 14px; line-height: 155%; color: #cbd5e1; max-width: 510px; margin: 0px auto 10px;">Place real-money bets on virtual races, claim your early access perks, and secure exciting Packs just for participating!</p>
-                        <p style="font-size: 13px; line-height: 155%; color: #94a3b8; max-width: 500px; margin: 0px auto 20px;">Every player who places qualifying bets during the beta period earns <strong style="color: #ffffff;">Packs</strong>—regardless of whether your bets win or lose!</p>
+                        <h1 style="color: #ffffff; font-size: 26px; line-height: 125%; font-weight: 800; letter-spacing: -0.4px; text-align: center; margin-top: 14px; margin-bottom: 12px;">Racing Open Beta is Live</h1>
+                        <p style="font-size: 15px; line-height: 155%; color: #e2e8f0; margin-bottom: 12px;">The wait is over. Clutch Racing Open Beta is officially live.</p>
+                        <p style="font-size: 13px; line-height: 155%; color: #94a3b8; max-width: 500px; margin: 0px auto 16px;">Bet on virtual races with real money, win real cash, compete for prizes and earn rewards just for being part of the Open Beta.</p>
                     </td>
-                </tr><!-- 4. 3 FEATURE PILLARS -->
+                </tr>
+                <!-- 4. SPLIT FEATURE CARD (ENLARGED IMAGE LEFT, TEXT RIGHT) -->
+                <tr>
+                    <td class="content-padding" style="padding: 0 20px 22px 20px; background-color: #121E2C;">
+                        <table cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #0B131D; border-radius: 18px;">
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 24px 20px;">
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <!-- Left Column: Enlarged Feature Image Card (52%) -->
+                                                    <td width="52%" class="split-col split-col-img" valign="middle" style="padding-right: 14px;">
+                                                        <a target="_blank" href="https://www.clutch.app/en/#racing" rel="noopener noreferrer">
+                                                            <img src="https://egxor.stripocdnplugin.email/content/6d3dac714f0b4ccebfa1032816a53a66/lib/pluginId_6d3dac714f0b4ccebfa1032816a53a66_email_8361203f-ea7f-4d40-9e01-2547a0e89440/photo_20260903_083711.jpg" alt="Racing Arena Feature" width="260" style="display: block; border-radius: 12px; border: 0; width: 100%; max-width: 260px; height: auto;">
+                                                        </a>
+                                                    </td>
+                                                    <!-- Right Column: Contextual Copy (48%) -->
+                                                    <td width="48%" class="split-col" valign="middle" style="padding-left: 4px;" class="esd-text">
+                                                        <span style="font-size: 11px; font-weight: 800; color: #38BDF8; text-transform: uppercase; letter-spacing: 1.2px; display: block; margin-bottom: 6px;"> COMMUNITY POWERED </span>
+                                                        <h2 style="color: #ffffff; font-size: 15px; line-height: 135%; font-weight: 700; margin-bottom: 6px;">Next-Gen Virtual Racing</h2>
+                                                        <p style="font-size: 12px; line-height: 150%; color: #cbd5e1; margin: 0;">Built from the technology behind Zed and brought together by communities, Racing is a new global virtual racing product live on Clutch.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <!-- 5. 3 FEATURE PILLARS -->
                 <tr>
                     <td class="content-padding" style="padding: 0 20px 22px 20px; background-color: #121E2C;">
                         <table cellpadding="0" cellspacing="0" border="0" width="100%">
@@ -125,8 +160,8 @@
                                             <tbody>
                                                 <tr>
                                                     <td align="center" style="padding: 20px 12px;" class="esd-text">
-                                                        <p style="font-size: 14px; font-weight: 700; color: #38BDF8; margin-bottom: 4px;">🐎 Racing</p>
-                                                        <p style="font-size: 11px; color: #94A3B8; line-height: 135%; margin: 0;">Virtual race betting</p>
+                                                        <p style="font-size: 14px; font-weight: 700; color: #38BDF8; margin-bottom: 4px;">💸 Cash</p>
+                                                        <p style="font-size: 11px; color: #94A3B8; line-height: 135%; margin: 0;">Leaderboards & prizes</p>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -137,8 +172,8 @@
                                             <tbody>
                                                 <tr>
                                                     <td align="center" style="padding: 20px 12px;" class="esd-text">
-                                                        <p style="font-size: 14px; font-weight: 700; color: #38BDF8; margin-bottom: 4px;">🎁 Guaranteed</p>
-                                                        <p style="font-size: 11px; color: #94A3B8; line-height: 135%; margin: 0;">Earn Packs win or lose</p>
+                                                        <p style="font-size: 14px; font-weight: 700; color: #38BDF8; margin-bottom: 4px;">🎁 Drops</p>
+                                                        <p style="font-size: 11px; color: #94A3B8; line-height: 135%; margin: 0;">Packs & exclusive codes</p>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -149,8 +184,8 @@
                                             <tbody>
                                                 <tr>
                                                     <td align="center" style="padding: 20px 12px;" class="esd-text">
-                                                        <p style="font-size: 14px; font-weight: 700; color: #38BDF8; margin-bottom: 4px;">👑 Ownership</p>
-                                                        <p style="font-size: 11px; color: #94A3B8; line-height: 135%; margin: 0;">Stake in future earnings</p>
+                                                        <p style="font-size: 14px; font-weight: 700; color: #38BDF8; margin-bottom: 4px;">🛠️ Bounties</p>
+                                                        <p style="font-size: 11px; color: #94A3B8; line-height: 135%; margin: 0;">Report bugs & get rewarded</p>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -160,7 +195,8 @@
                             </tbody>
                         </table>
                     </td>
-                </tr><!-- 5. PROMO REWARDS HIGHLIGHT CONTAINER -->
+                </tr>
+                <!-- 6. PLAY EARLY REWARDS CONTAINER -->
                 <tr>
                     <td class="content-padding" style="padding: 0 20px 22px 20px; background-color: #121E2C;">
                         <table cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #0B131D; border-radius: 18px;">
@@ -170,42 +206,17 @@
                                         <table cellpadding="0" cellspacing="0" border="0" width="100%">
                                             <tbody>
                                                 <tr>
-                                                    <td align="left" style="padding-bottom: 18px;" class="esd-text"><span style="font-size: 12px; font-weight: 800; color: #38BDF8; text-transform: uppercase; letter-spacing: 1.2px; display: block;"> BETA REWARD STRUCTURE </span></td>
+                                                    <td align="left" style="padding-bottom: 18px;" class="esd-text"><span style="font-size: 12px; font-weight: 800; color: #38BDF8; text-transform: uppercase; letter-spacing: 1.2px; display: block;"> PLAY EARLY. GET REWARDED. </span></td>
                                                 </tr>
                                                 <tr>
                                                     <td style="padding-bottom: 12px;">
-                                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td width="48%" class="method-item" style="background-color: #162536; border-radius: 12px; padding: 16px 20px;">
-                                                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                                                                            <tbody>
-                                                                                <tr>
-                                                                                    <td align="left" style="font-size: 14px; font-weight: 700; color: #ffffff;" class="esd-text">No Minimum Spend</td>
-                                                                                    <td align="right" style="padding-left: 8px;" class="esd-text"><span style="font-size: 9px; font-weight: 700; color: #38BDF8; background-color: rgba(56, 189, 248, 0.14); padding: 4px 8px; border-radius: 4px; white-space: nowrap; display: inline-block;">OPEN TO ALL</span></td>
-                                                                                </tr>
-                                                                            </tbody>
-                                                                        </table>
-                                                                    </td>
-                                                                    <td width="4%" class="esd-text">&nbsp;</td>
-                                                                    <td width="48%" class="method-item" style="background-color: #162536; border-radius: 12px; padding: 16px 20px;">
-                                                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                                                                            <tbody>
-                                                                                <tr>
-                                                                                    <td align="left" style="font-size: 14px; font-weight: 700; color: #ffffff;" class="esd-text">Partial Shares</td>
-                                                                                    <td align="right" style="font-size: 11px; font-weight: 600; color: #94A3B8; padding-left: 8px; white-space: nowrap;" class="esd-text">In Racing Horses</td>
-                                                                                </tr>
-                                                                            </tbody>
-                                                                        </table>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="esd-text">
-                                                        <p style="font-size: 13px; color: #94a3b8; line-height: 150%; margin: 0;">Packs contain partial ownership shares in racing horses, which may entitle holders to a stake in future earnings. Packs are credited directly to your account at the end of the beta period.</p>
+                                                        <p style="font-size: 13px; color: #cbd5e1; line-height: 155%; margin-bottom: 12px;">Throughout Open Beta, we’ll be dropping rewards for players who jump in and help us test Racing:</p>
+                                                        <ul style="margin: 0; padding-left: 18px; font-size: 13px; color: #94a3b8; line-height: 160%;">
+                                                            <li style="margin-bottom: 6px;"><strong style="color: #ffffff;">Cash Prizes:</strong> Compete in leaderboards, challenges and promotions.</li>
+                                                            <li style="margin-bottom: 6px;"><strong style="color: #ffffff;">Pack Codes & Drops:</strong> Play Racing and receive opportunities to earn Packs and exclusive codes.</li>
+                                                            <li style="margin-bottom: 6px;"><strong style="color: #ffffff;">Referral Rewards:</strong> Look out for referral codes, community drops and special rewards.</li>
+                                                            <li><strong style="color: #ffffff;">Bug Bounties:</strong> Find a bug or something that doesn’t look right? Report it and you could be rewarded.</li>
+                                                        </ul>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -215,7 +226,8 @@
                             </tbody>
                         </table>
                     </td>
-                </tr><!-- 6. 3-STEP WALKTHROUGH -->
+                </tr>
+                <!-- 7. 4-STEP HOW TO JOIN -->
                 <tr>
                     <td class="content-padding" style="padding: 0 20px 24px 20px; background-color: #121E2C;">
                         <table cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #0B131D; border-radius: 18px;">
@@ -225,10 +237,11 @@
                                         <table cellpadding="0" cellspacing="0" border="0" width="100%">
                                             <tbody>
                                                 <tr>
-                                                    <td style="padding-bottom: 20px;" colspan="2" class="esd-text"><span style="font-size: 11px; font-weight: 800; color: #38BDF8; text-transform: uppercase; letter-spacing: 1.2px; display: block;"> ⚡ HOW TO PARTICIPATE </span></td>
-                                                </tr><!-- Step 1 -->
+                                                    <td style="padding-bottom: 20px;" colspan="2" class="esd-text"><span style="font-size: 11px; font-weight: 800; color: #38BDF8; text-transform: uppercase; letter-spacing: 1.2px; display: block;"> ⚡ HOW TO JOIN </span></td>
+                                                </tr>
+                                                <!-- Step 1 -->
                                                 <tr>
-                                                    <td width="36" valign="middle" style="padding-bottom: 18px;">
+                                                    <td width="36" valign="middle" style="padding-bottom: 16px;">
                                                         <table cellpadding="0" cellspacing="0" border="0">
                                                             <tbody>
                                                                 <tr>
@@ -237,10 +250,11 @@
                                                             </tbody>
                                                         </table>
                                                     </td>
-                                                    <td valign="middle" style="padding-bottom: 18px; padding-left: 12px; font-size: 14px; color: #E2E8F0; line-height: 145%;" class="esd-text"> Head to the new <strong>Racing</strong> lobby on Clutch. </td>
-                                                </tr><!-- Step 2 -->
+                                                    <td valign="middle" style="padding-bottom: 16px; padding-left: 12px; font-size: 14px; color: #E2E8F0; line-height: 145%;" class="esd-text"> Head to the new <strong>Racing</strong> lobby on Clutch. </td>
+                                                </tr>
+                                                <!-- Step 2 -->
                                                 <tr>
-                                                    <td width="36" valign="middle" style="padding-bottom: 18px;">
+                                                    <td width="36" valign="middle" style="padding-bottom: 16px;">
                                                         <table cellpadding="0" cellspacing="0" border="0">
                                                             <tbody>
                                                                 <tr>
@@ -249,10 +263,11 @@
                                                             </tbody>
                                                         </table>
                                                     </td>
-                                                    <td valign="middle" style="padding-bottom: 18px; padding-left: 12px; font-size: 14px; color: #E2E8F0; line-height: 145%;" class="esd-text">Place real-money bets on virtual races during the beta period.</td>
-                                                </tr><!-- Step 3 -->
+                                                    <td valign="middle" style="padding-bottom: 16px; padding-left: 12px; font-size: 14px; color: #E2E8F0; line-height: 145%;" class="esd-text">Place real-money bets on virtual races.</td>
+                                                </tr>
+                                                <!-- Step 3 -->
                                                 <tr>
-                                                    <td width="36" valign="middle">
+                                                    <td width="36" valign="middle" style="padding-bottom: 16px;">
                                                         <table cellpadding="0" cellspacing="0" border="0">
                                                             <tbody>
                                                                 <tr>
@@ -261,7 +276,20 @@
                                                             </tbody>
                                                         </table>
                                                     </td>
-                                                    <td valign="middle" style="padding-left: 12px; font-size: 14px; color: #E2E8F0; line-height: 145%;" class="esd-text">Automatically earn Packs, just for participating — win or lose!</td>
+                                                    <td valign="middle" style="padding-bottom: 16px; padding-left: 12px; font-size: 14px; color: #E2E8F0; line-height: 145%;" class="esd-text">Win cash and compete for beta rewards.</td>
+                                                </tr>
+                                                <!-- Step 4 -->
+                                                <tr>
+                                                    <td width="36" valign="middle">
+                                                        <table cellpadding="0" cellspacing="0" border="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="center" valign="middle" width="28" height="28" style="background-color: #1090EA; border-radius: 50%; color: #ffffff; font-weight: 800; font-size: 13px; line-height: 28px;" class="esd-text"> 4 </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td valign="middle" style="padding-left: 12px; font-size: 14px; color: #E2E8F0; line-height: 145%;" class="esd-text">Send us your feedback and help us improve the product.</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -270,24 +298,40 @@
                             </tbody>
                         </table>
                     </td>
-                </tr><!-- 7. PRIMARY CTA BUTTON -->
+                </tr>
+                <!-- 8. PRIMARY CTA BUTTON WITH HIGHLIGHTED ROADMAP -->
                 <tr>
                     <td class="content-padding esd-text" align="center" style="padding: 4px 30px 26px 30px; background-color: #121E2C;">
                         <table cellpadding="0" cellspacing="0" border="0" align="center">
                             <tbody>
                                 <tr>
-                                    <td align="center" style="background-color: #1090EA; border-radius: 12px;"><a href="https://www.clutch.app/en/#racing" target="_blank" rel="noopener noreferrer" style="background: #1090EA; color: #ffffff; border: 0; border-radius: 12px; font-weight: 800; font-size: 15px; display: inline-block; padding: 16px 48px; text-decoration: none; letter-spacing: 0.5px; text-transform: uppercase;"> Enter Racing Beta → </a></td>
+                                    <td align="center" style="background-color: #1090EA; border-radius: 12px;"><a href="https://www.clutch.app/en/#racing" target="_blank" rel="noopener noreferrer" style="background: #1090EA; color: #ffffff; border: 0; border-radius: 12px; font-weight: 800; font-size: 15px; display: inline-block; padding: 16px 48px; text-decoration: none; letter-spacing: 0.5px; text-transform: uppercase;"> Enter Racing Open Beta → </a></td>
                                 </tr>
                             </tbody>
                         </table>
-                        <p style="font-size: 14px; color: #38BDF8; font-weight: 700; text-align: center; margin-top: 14px;"> Good luck Kings! 👑 </p>
+                        
+                        <!-- HIGH-CONTRAST HIGHLIGHT BOX FOR THE ROADMAP & FUTURE DROPS -->
+                        <table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top: 22px; background-color: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 14px;">
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 16px 20px; text-align: left;">
+                                        <p style="font-size: 12px; font-weight: 700; color: #38BDF8; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px;">🚀 What Comes Next</p>
+                                        <p style="font-size: 13px; color: #e2e8f0; line-height: 155%; margin: 0;">Open Beta will remain live until we’re fully optimized. During that time, expect <strong>new features, continuous improvements, exciting promotions, and rolling reward drops</strong>.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p style="font-size: 16px; color: #38BDF8; font-weight: 700; text-align: center; margin-top: 18px;"> You’re early. Come race with us! 👑 </p>
                     </td>
-                </tr><!-- 8. 24/7 SUPPORT BAR -->
+                </tr>
+                <!-- 9. 24/7 SUPPORT BAR -->
                 <tr>
                     <td align="center" style="padding: 18px 30px; background-color: #0E1824; font-size: 13px;" class="esd-text">
-                        <p style="margin: 0; color: #CBD5E1; line-height: 150%;">Need help getting started? Contact our 24/7 team via <a target="_blank" rel="noopener noreferrer" style="color: #38BDF8; text-decoration: underline; font-weight: 600;" href="https://clutch.app/">Live Support</a> or on <a target="_blank" rel="noopener noreferrer" style="color: #38BDF8; text-decoration: underline; font-weight: 600;" href="https://links.clutch.app/telegram">Telegram</a>.</p>
+                        <p style="margin: 0; color: #CBD5E1; line-height: 150%;">Need help or found a bug? Contact our team via <a target="_blank" rel="noopener noreferrer" style="color: #38BDF8; text-decoration: underline; font-weight: 600;" href="https://clutch.app/">Live Support</a> or on <a target="_blank" rel="noopener noreferrer" style="color: #38BDF8; text-decoration: underline; font-weight: 600;" href="https://links.clutch.app/telegram">Telegram</a>.</p>
                     </td>
-                </tr><!-- 9. SOCIALS -->
+                </tr>
+                <!-- 10. SOCIALS -->
                 <tr>
                     <td align="center" style="padding: 16px 30px 22px 30px; background-color: #121E2C;">
                         <table cellpadding="0" cellspacing="0" border="0" align="center">
@@ -300,10 +344,11 @@
                             </tbody>
                         </table>
                     </td>
-                </tr><!-- 10. COMPLIANCE & LEGAL FOOTER -->
+                </tr>
+                <!-- 11. COMPLIANCE & LEGAL FOOTER -->
                 <tr>
                     <td class="content-padding esd-text" align="left" style="padding: 20px 32px 26px 32px; background-color: #080D14; font-size: 11px; line-height: 145%; color: #64748B;">
-                        <p style="margin: 0 0 8px 0;"> Only real-money bets placed and settled on Racing during the beta period count toward Pack rewards. Cashed-out bets and bets placed using free bets or bonus funds do not qualify. Packs are credited at the end of the beta period. </p>
+                        <p style="margin: 0 0 8px 0;"> Participation in the Racing Open Beta is subject to promotional terms. Real-money betting rules apply. </p>
                         <p style="margin: 0;"> © 2026 Clutch.app. All rights reserved. Play responsibly. 18+ only. </p>
                     </td>
                 </tr>
@@ -315,7 +360,8 @@
         <div class="reserved-section-urm" style="max-width:600px;margin:auto;"></div>
         <div class="reserved-section-urm" style="max-width:600px;margin:auto;"></div>
         <div class="reserved-section-urm" style="max-width:600px;margin:auto;"></div>
-        <div class="reserved-section-urm" style="max-width:600px;margin:auto;"></div><!-- CRM System Reserved Tags -->
+        <div class="reserved-section-urm" style="max-width:600px;margin:auto;"></div>
+        <!-- CRM System Reserved Tags -->
         <div class="reserved-section-urm" style="max-width: 600px; margin: auto;"></div>
         <div class="reserved-section-urm" style="max-width: 600px; margin: auto;"></div>
     </div>
