@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clutch CRM Flow — Campaign Previews &amp; Player Journey</title>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0 16px 60px 16px; background-color: #0B131D; font-family: 'Rubik', Arial, sans-serif; color: #ffffff; }
+a { color: inherit; }
+.wrap { max-width: 880px; margin: 0 auto; }
+.header { text-align: center; padding: 40px 0 24px 0; }
+.header img { width: 150px; margin-bottom: 18px; }
+.header h1 { font-size: 30px; font-weight: 800; margin: 0 0 6px 0; }
+.header .subtitle { font-size: 13px; color: #38BDF8; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 22px; }
+.nav { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.nav a { font-size: 12px; font-weight: 600; color: #CBD5E1; text-decoration: none; border: 1px solid #23405C; border-radius: 99px; padding: 8px 16px; transition: all .2s ease; }
+.nav a:hover { background: #1090EA; border-color: #38BDF8; color: #fff; }
+.featured { margin: 30px 0 50px 0; background: linear-gradient(135deg, #0E3A66 0%, #0B131D 100%); border: 1px solid rgba(56,189,248,.45); border-radius: 18px; padding: 26px 28px; }
+.featured .eyebrow { font-size: 11px; font-weight: 700; color: #38BDF8; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.featured h2 { font-size: 22px; font-weight: 800; margin: 0 0 8px 0; }
+.featured p { font-size: 14px; color: #CBD5E1; line-height: 150%; margin: 0 0 18px 0; }
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.kpi { background: rgba(11,19,29,.6); border: 1px solid #23405C; border-radius: 12px; padding: 14px; }
+.kpi-val { font-size: 24px; font-weight: 800; }
+.kpi-label { font-size: 11px; color: #94A3B8; text-transform: uppercase; letter-spacing: .6px; margin-top: 2px; }
+@media (max-width: 600px) { .kpis { grid-template-columns: repeat(2, 1fr); } }
+.page-section { margin: 56px 0; }
+.page-section h2.big-title { font-size: 22px; font-weight: 800; margin: 0 0 6px 0; }
+.page-section .big-note { font-size: 13px; color: #94A3B8; margin-bottom: 28px; line-height: 150%; }
+.branch { margin-bottom: 40px; border-left: 2px dashed #23405C; padding-left: 22px; margin-left: 22px; }
+.branch-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; margin-left: -45px; }
+.branch-icon { font-size: 22px; background: #0B131D; border: 1px solid #23405C; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.branch-title { font-size: 16px; font-weight: 800; color: #38BDF8; }
+.branch-note { font-size: 12px; color: #94A3B8; margin-top: 2px; line-height: 145%; }
+.branch-seg { font-size: 11px; color: #CBD5E1; margin-top: 6px; }
+.branch-seg strong { color: #fff; }
+.branch-body { display: flex; flex-direction: column; }
+.step-card { display: flex; gap: 12px; background: #121E2C; border: 1px solid #1F3348; border-radius: 12px; padding: 14px 16px; text-decoration: none; color: #fff; transition: all .2s ease; }
+.step-card:hover { background: #162638; border-color: #38BDF8; transform: translateY(-1px); }
+.step-num { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: #1090EA; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; }
+.step-body { flex: 1; min-width: 0; }
+.step-title-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.step-title { font-size: 14px; font-weight: 700; }
+.step-tag { font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 8px; border-radius: 99px; color: #0B131D; background: #38BDF8; }
+.step-subject { font-size: 12px; color: #E2E8F0; margin-top: 4px; font-style: italic; }
+.step-desc { font-size: 12px; color: #94A3B8; margin-top: 4px; line-height: 145%; }
+.step-stats { display: inline-block; font-size: 11px; color: #86EFAC; background: rgba(74,222,128,.08); border: 1px solid rgba(74,222,128,.25); border-radius: 6px; padding: 3px 8px; margin-top: 8px; }
+.connector { width: 1px; height: 14px; background: #23405C; margin-left: 13px; }
+.wait { font-size: 11px; color: #94A3B8; padding-left: 4px; }
+.decision { align-self: flex-start; background: #0E1824; border: 1px dashed #38BDF8; border-radius: 99px; padding: 7px 16px; font-size: 11px; font-weight: 700; color: #38BDF8; }
+.decision-detail { font-weight: 500; color: #94A3B8; margin-left: 6px; }
+.handoff { font-size: 11px; color: #94A3B8; font-style: italic; margin-top: 12px; padding-left: 4px; }
+.ladder { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.ladder-col { display: flex; flex-direction: column; background: rgba(16,144,234,.06); border-radius: 12px; padding: 12px; }
+.ladder-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: #38BDF8; margin-bottom: 8px; }
+.ladder-seg { font-size: 11px; color: #94A3B8; margin: 2px 0 6px 2px; }
+@media (max-width: 640px) { .ladder { grid-template-columns: 1fr; } .branch { margin-left: 10px; padding-left: 16px; } .branch-header { margin-left: -33px; } }
+.paused { margin-top: 10px; background: #121E2C; border: 1px solid #1F3348; border-radius: 12px; padding: 14px 16px; font-size: 12px; color: #94A3B8; line-height: 170%; }
+.paused strong { color: #CBD5E1; }
+.pill { display: inline-block; border: 1px solid #334155; border-radius: 99px; padding: 1px 9px; margin: 2px 3px 2px 0; color: #CBD5E1; white-space: nowrap; }
+.promo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+.promo-card { background: #121E2C; border: 1px solid #1F3348; border-radius: 14px; padding: 18px; }
+.promo-icon { font-size: 22px; margin-bottom: 8px; }
+.promo-name { font-size: 14px; font-weight: 700; margin-bottom: 6px; line-height: 130%; }
+.promo-cadence { display: inline-block; font-size: 11px; font-weight: 700; color: #0B131D; background: #38BDF8; border-radius: 99px; padding: 4px 10px; margin-bottom: 10px; }
+.promo-vertical { font-size: 11px; color: #94A3B8; margin-bottom: 10px; }
+.promo-used { font-size: 11px; color: #CBD5E1; line-height: 150%; border-top: 1px dashed #23405C; padding-top: 10px; }
+.promo-used-label { color: #38BDF8; font-weight: 700; }
+.section-title { font-size: 13px; font-weight: 700; color: #38BDF8; text-transform: uppercase; letter-spacing: 1px; margin: 26px 0 12px 0; border-bottom: 1px dashed #23405C; padding-bottom: 6px; }
+.template-list { list-style: none; padding: 0; margin: 0; }
+.template-item { margin-bottom: 12px; }
+.template-link { display: block; background-color: #121E2C; border: 1px solid #1F3348; border-radius: 10px; padding: 14px 18px; color: #ffffff; text-decoration: none; font-size: 14px; font-weight: 600; transition: all 0.2s ease; }
+.template-link:hover { background-color: #162638; border-color: #38BDF8; transform: translateY(-2px); }
+.template-desc { font-size: 12px; color: #94A3B8; margin-top: 4px; font-weight: 400; line-height: 140%; }
+.badge { display: inline-block; font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: .5px; padding: 2px 7px; border-radius: 99px; margin-left: 6px; vertical-align: middle; }
+.badge.live { background: rgba(74,222,128,.15); color: #86EFAC; }
+.badge.off { background: #1F3348; color: #94A3B8; }
+.segments-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.segments-table th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #38BDF8; padding: 10px 12px; border-bottom: 1px solid #23405C; white-space: nowrap; }
+.segments-table td { padding: 11px 12px; border-bottom: 1px solid #16212E; vertical-align: top; color: #CBD5E1; }
+.segments-table td:first-child { color: #fff; font-weight: 700; }
+.segments-table td.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.segments-table th.num { text-align: right; }
+.table-scroll { overflow-x: auto; border: 1px solid #23405C; border-radius: 14px; padding: 4px 8px; margin-bottom: 18px; }
+.footer { text-align: center; font-size: 11px; color: rgba(203,213,225,.55); margin-top: 60px; border-top: 1px solid #23405C; padding-top: 20px; line-height: 160%; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header">
+    <img src="https://edmzn.stripocdnplugin.email/content/509e2b7b4ebe4f66821f283d3da799d3/lib/pluginId_509e2b7b4ebe4f66821f283d3da799d3_email_1rrwn8sxv1/logo_3x_512Ive1uhsCGj3tZ.png" alt="Clutch">
+    <h1>Clutch CRM Flow</h1>
+    <div class="subtitle">Campaign Previews &amp; Player Journey</div>
+    <div class="nav">
+      <a href="#journey">Journey Map</a>
+      <a href="#promos">Promo Status</a>
+      <a href="#library">Template Library</a>
+      <a href="#segments">Segments</a>
+    </div>
+  </div>
+
+  <div class="featured">
+    <div class="eyebrow">📡 Live in the CRM · checked 12 Oct 2026</div>
+    <h2>What's running right now</h2>
+    <p>Every flow, delay, deposit check and segment below is taken from the RapidPace CRM as it is configured today. Send, open and click figures are each email's totals since its flow went live.</p>
+    <div class="kpis">
+      <div class="kpi"><div class="kpi-val">7</div><div class="kpi-label">Active flows</div></div>
+      <div class="kpi"><div class="kpi-val">12</div><div class="kpi-label">Emails in flows</div></div>
+      <div class="kpi"><div class="kpi-val">9,188</div><div class="kpi-label">Emails sent</div></div>
+      <div class="kpi"><div class="kpi-val">28</div><div class="kpi-label">Segments</div></div>
+    </div>
+  </div>
+
+  <div class="page-section" id="journey">
+    <h2 class="big-title">🗺️ Player Journey Map</h2>
+    <div class="big-note">The 7 active flows, grouped by what triggers them. Days are counted from registration (onboarding) or from the deposit that triggered the flow. Decision pills are the CRM's real deposit checks, with how many players left or continued at each one. Tap any card to open the email.</div>
+    
+    <div class="branch ">
+      <div class="branch-header">
+        <div class="branch-icon">🚀</div>
+        <div>
+          <div class="branch-title">New Registrations — Onboarding</div>
+          <div class="branch-note">Entry flow. A deposit check before every reminder; the flow ends as soon as the player deposits.</div>
+          <div class="branch-seg">Segment: <strong>New Registrations - Onboarding</strong></div>
+        </div>
+      </div>
+      <div class="branch-body">
+        <a class="step-card" href="welcome-email.html">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title-row"><span class="step-tag">Day 0</span><span class="step-title">Welcome Email</span></div>
+            <div class="step-subject">Subject: Welcome to Clutch! Your Rewards are Unlocked 🔓</div>
+            <div class="step-desc">Registration welcome: every player reward unlocked from day one (deposit bonuses, reloads, cashback), plus Racing and Sportsbook.</div>
+            <div class="step-stats">1,895 sent · 31.2% opened · 10.5% clicked</div>
+          </div>
+        </a>
+        <div class="connector"></div><div class="wait">⏱ Wait 1 hour</div><div class="connector"></div>
+        <div class="decision">🔀 Deposited yet? <span class="decision-detail">31 deposited and left · 3,082 continued</span></div><div class="connector"></div>
+        <a class="step-card" href="1hr-no-deposit-reminder.html">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title-row"><span class="step-tag">+1 hour</span><span class="step-title">1-Hour No-Deposit Reminder</span></div>
+            <div class="step-subject">Subject: Still time to claim your beta perks</div>
+            <div class="step-desc">Account still unfunded: card &amp; bank deposits via Onramper, Racing Open Beta, Run It Back Monday and Airdrop Season One.</div>
+            <div class="step-stats">1,868 sent · 30.3% opened · 3.6% clicked</div>
+          </div>
+        </a>
+        <div class="connector"></div><div class="wait">⏱ Wait 1 day</div><div class="connector"></div>
+        <div class="decision">🔀 Deposited yet? <span class="decision-detail">5 left · 2,978 continued</span></div><div class="connector"></div>
+        <a class="step-card" href="1-day-reminder.html">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title-row"><span class="step-tag">Day 1</span><span class="step-title">1-Day No-Deposit Reminder</span></div>
+            <div class="step-subject">Subject: You’re in the driver’s seat at Clutch Casino 🔑</div>
+            <div class="step-desc">Leads with “Not sure how to deposit?”: card &amp; bank deposits (Onramper), then early-access perks and live promos.</div>
+            <div class="step-stats">1,870 sent · 25.8% opened · 2.5% clicked</div>
+          </div>
+        </a>
+        <div class="connector"></div><div class="wait">⏱ Wait 3 days</div><div class="connector"></div>
+        <div class="decision">🔀 Deposited yet? <span class="decision-detail">2 left · 2,698 continued</span></div><div class="connector"></div>
+        <a class="step-card" href="3-day-reminder.html">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title-row"><span class="step-tag">Day 4</span><span class="step-title">3-Day No-Deposit Reminder</span></div>
+            <div class="step-subject">Subject: Boost your odds at Clutch Sportsbook 🚀</div>
+            <div class="step-desc">Sportsbook-led: 1,000+ events, combos boosted up to 40%, Daily Super Boosts, Horse Racing and Run It Back Monday.</div>
+            <div class="step-stats">1,978 sent · 19.4% opened · 1.6% clicked</div>
+          </div>
+        </a>
+        <div class="connector"></div><div class="wait">⏱ Wait 7 days</div><div class="connector"></div>
+        <div class="decision">🔀 Deposited yet? <span class="decision-detail">0 left · 1,203 continued</span></div><div class="connector"></div>
+        <a class="step-card" href="7-day-reminder.html">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <div class="step-title-row"><span class="step-tag">Day 11</span><span class="step-title">7-Day No-Deposit Reminder</span></div>
+            <div class="step-subject">Subject: No crypto? No problem.</div>
+            <div class="step-desc">Last onboarding touch: card &amp; bank deposits remove the crypto barrier, then Deposit Bonuses, Racing and Run It Back Monday.</div>
+            <div class="step-stats">898 sent · 14.4% opened · 1.3% clicked</div>
+          </div>
+        </a>
+        <div class="handoff">↳ End of the onboarding flow. A “Yes” at any check ends it; the player’s first deposit then triggers the deposit ladder below.</div>
+      </div>
+    </div>
+    <div class="branch ">
+      <div class="branch-header">
+        <div class="branch-icon">🎯</div>
+        <div>
+          <div class="branch-title">Deposit Ladder — “Day After” flows</div>
+          <div class="branch-note">Four separate entry flows, one per deposit number. Each starts when the player enters its segment.</div>
+          <div class="branch-seg">Segment: <strong>1st / 2nd / 3rd / 4th Deposit made - Day After</strong></div>
+        </div>
+      </div>
+      <div class="branch-body">
+        <div class="ladder">
+          <div class="ladder-col">
+            <div class="ladder-label">After deposit #1</div>
+            <div class="ladder-seg">Segment: 1st Deposit made - Day After</div>
+            <div class="connector"></div><div class="wait">⏱ Wait 1 day</div><div class="connector"></div>
+            <a class="step-card" href="post-ftd-day1-engagement.html">
+          <div class="step-num">6</div>
+          <div class="step-body">
+            <div class="step-title-row"><span class="step-tag">Day 1</span><span class="step-title">Post-FTD Day 1 Engagement</span></div>
+            <div class="step-subject">Subject: You’re In!</div>
+            <div class="step-desc">What to play first: Clutch Originals, Elite Early Access, Beta Test &amp; Earn Crypto (up to $1,000) and Horse Racing.</div>
+            <div class="step-stats">150 sent · 39.3% opened · 8.0% clicked</div>
+          </div>
+        </a>
+            <div class="connector"></div><div class="wait">⏱ Wait 2 days</div><div class="connector"></div>
+            <a class="step-card" href="post-ftd-day3-engagement.html">
+          <div class="step-num">7</div>
+          <div class="step-body">
+            <div class="step-title-row"><span class="step-tag">Day 3</span><span class="step-title">Post-FTD Day 3 Engagement</span></div>
+            <div class="step-subject">Subject: Keep the Momentum Going</div>
+            <div class="step-desc">Builds the habit: Run It Back Monday, Airdrop Season One and Horse Racing.</div>
+            <div class="step-stats">129 sent · 29.5% opened · 3.9% clicked</div>
+          </div>
+        </a>
+          </div>
+          <div class="ladder-col">
+            <div class="ladder-label">After deposits #2, #3 and #4</div>
+            <div class="ladder-seg">Segments: 2nd / 3rd / 4th Deposit made - Day After (one flow each)</div>
+            <div class="connector"></div><div class="wait">⏱ Wait 1 day</div><div class="connector"></div>
+            <a class="step-card" href="post-2nd-deposit-milestone.html">
+          <div class="step-num">9</div>
+          <div class="step-body">
+            <div class="step-title-row"><span class="step-tag">Deposit #2</span><span class="step-title">Post-2nd Deposit Milestone</span></div>
+            <div class="step-subject">Subject: You’re Just Getting Started</div>
+            <div class="step-desc">Ecosystem tour: Casino (Originals, live dealer), Sports, Horse Racing and Esports.</div>
+            <div class="step-stats">72 sent · 33.3% opened · 5.6% clicked</div>
+          </div>
+        </a>
+            <div class="connector"></div>
+            <div class="connector"></div><div class="wait">⏱ Wait 1 day after deposit #3</div><div class="connector"></div>
+            <a class="step-card" href="post-3rd-deposit-milestone.html">
+          <div class="step-num">10</div>
+          <div class="step-body">
+            <div class="step-title-row"><span class="step-tag">Deposit #3</span><span class="step-title">Post-3rd Deposit Milestone</span></div>
+            <div class="step-subject">Subject: Stack Your Bets, Boost Your Wins</div>
+            <div class="step-desc">Sportsbook push: combos boosted up to 40%, 1,000+ events, Horse Racing.</div>
+            <div class="step-stats">49 sent · 36.7% opened · 4.1% clicked</div>
+          </div>
+        </a>
+            <div class="connector"></div>
+            <div class="connector"></div><div class="wait">⏱ Wait 1 day after deposit #4</div><div class="connector"></div>
+            <a class="step-card" href="post-4th-deposit-loyalty-milestone.html">
+          <div class="step-num">11</div>
+          <div class="step-body">
+            <div class="step-title-row"><span class="step-tag">Deposit #4</span><span class="step-title">Post-4th Deposit &amp; Loyalty Milestone</span></div>
+            <div class="step-subject">Subject: You’ve Made the Rank!</div>
+            <div class="step-desc">Loyalty: Run It Back Monday, Ranked Rewards ladder, Clutch VIP Club (up to 25% cashback) and Horse Racing.</div>
+            <div class="step-stats">41 sent · 46.3% opened · 29.3% clicked</div>
+          </div>
+        </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="branch ">
+      <div class="branch-header">
+        <div class="branch-icon">🔄</div>
+        <div>
+          <div class="branch-title">Second-Deposit Nudge</div>
+          <div class="branch-note">Entry flow for first-time depositors who have played but not reloaded.</div>
+          <div class="branch-seg">Segment: <strong>First Time Depositors, Played, No 2nd Deposit</strong></div>
+        </div>
+      </div>
+      <div class="branch-body">
+        <div class="connector"></div><div class="wait">⏱ Wait 1 day</div><div class="connector"></div>
+        <div class="decision">🔀 2nd deposit made? <span class="decision-detail">0 left · 143 continued</span></div><div class="connector"></div>
+        <a class="step-card" href="no-2nd-deposit-nudge.html">
+          <div class="step-num">8</div>
+          <div class="step-body">
+            <div class="step-title-row"><span class="step-tag">Reload nudge</span><span class="step-title">No 2nd Deposit Nudge</span></div>
+            <div class="step-subject">Subject: Ready for Round Two?</div>
+            <div class="step-desc">For first-time depositors who have played but not reloaded: Deposit Bonuses, card &amp; bank deposits, Run It Back Monday, Racing.</div>
+            <div class="step-stats">108 sent · 38.0% opened · 0.9% clicked</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="branch ">
+      <div class="branch-header">
+        <div class="branch-icon">⚠️</div>
+        <div>
+          <div class="branch-title">Churn Risk — Win-Back</div>
+          <div class="branch-note">Entry flow for repeat depositors who have stopped betting.</div>
+          <div class="branch-seg">Segment: <strong>High risk (churn threat)</strong></div>
+        </div>
+      </div>
+      <div class="branch-body">
+        <a class="step-card" href="churn-risk-winback.html">
+          <div class="step-num">12</div>
+          <div class="step-body">
+            <div class="step-title-row"><span class="step-tag">On entry</span><span class="step-title">Churn-Risk Win-Back</span></div>
+            <div class="step-subject">Subject: It’s been a while — Pack &amp; Referral Code Drops Await</div>
+            <div class="step-desc">Racing Open Beta hero (cash prizes, Pack &amp; referral code drops, bug bounties), then Airdrop Season One, Deposit Bonuses and card &amp; bank deposits.</div>
+            <div class="step-stats">130 sent · 24.6% opened · 3.8% clicked</div>
+          </div>
+        </a>
+        <div class="handoff">↳ Single email, sent when the player enters the segment.</div>
+      </div>
+    </div>
+    <div class="paused"><strong>Paused in the CRM (inactive flows):</strong><br><span class="pill">New Sign Ups</span><span class="pill">New Verified Players</span><span class="pill">Deposited 3+ Times</span><span class="pill">FTD_1x</span><span class="pill">Deposited but did not bet (30-days)</span><span class="pill">Inactive Players - 30+ Days AFK</span><span class="pill">Weekly Logins (5+)</span><span class="pill">Active Players (100+ Bets)</span><span class="pill">Logged In Once, No Deposit</span></div>
+  </div>
+
+  <div class="page-section" id="promos">
+    <h2 class="big-title">🎁 Promo &amp; Offer Status</h2>
+    <div class="big-note">The recurring offers the templates above promote, and which emails mention each one.</div>
+    <div class="promo-grid">
+        <div class="promo-card">
+          <div class="promo-icon">🏇</div>
+          <div class="promo-name">Clutch x Zed Horse Racing (Open Beta)</div>
+          <div class="promo-cadence">Live · Open Beta</div>
+          <div class="promo-vertical">Racing</div>
+          <div class="promo-used"><span class="promo-used-label">Used in:</span> Emails 1–12 (all), plus standalone 14</div>
+        </div>
+        <div class="promo-card">
+          <div class="promo-icon">💳</div>
+          <div class="promo-name">Card &amp; Bank Deposits (Onramper)</div>
+          <div class="promo-cadence">Live</div>
+          <div class="promo-vertical">Payments</div>
+          <div class="promo-used"><span class="promo-used-label">Used in:</span> Emails 2, 3, 4, 5, 8, 12, plus standalone 13</div>
+        </div>
+        <div class="promo-card">
+          <div class="promo-icon">🔄</div>
+          <div class="promo-name">Run It Back Monday</div>
+          <div class="promo-cadence">Every Monday · based on the previous 7 days</div>
+          <div class="promo-vertical">Sportsbook</div>
+          <div class="promo-used"><span class="promo-used-label">Used in:</span> Emails 2, 4, 5, 7, 8, 11</div>
+        </div>
+        <div class="promo-card">
+          <div class="promo-icon">💰</div>
+          <div class="promo-name">Deposit Bonuses</div>
+          <div class="promo-cadence">Ongoing</div>
+          <div class="promo-vertical">Cash, free bets, cashback &amp; leaderboard boosts</div>
+          <div class="promo-used"><span class="promo-used-label">Used in:</span> Emails 1, 3, 5, 8, 12</div>
+        </div>
+        <div class="promo-card">
+          <div class="promo-icon">🪂</div>
+          <div class="promo-name">Airdrop Season One</div>
+          <div class="promo-cadence">Season One</div>
+          <div class="promo-vertical">Real playing activity earns crypto rewards</div>
+          <div class="promo-used"><span class="promo-used-label">Used in:</span> Emails 2, 3, 7, 12</div>
+        </div>
+        <div class="promo-card">
+          <div class="promo-icon">📈</div>
+          <div class="promo-name">Combo Boost (up to 40%)</div>
+          <div class="promo-cadence">Always on</div>
+          <div class="promo-vertical">Sportsbook</div>
+          <div class="promo-used"><span class="promo-used-label">Used in:</span> Emails 4, 10</div>
+        </div>
+        <div class="promo-card">
+          <div class="promo-icon">👑</div>
+          <div class="promo-name">Ranked Rewards &amp; Clutch VIP Club</div>
+          <div class="promo-cadence">Ongoing · VIP up to 25% cashback</div>
+          <div class="promo-vertical">Every deposit and play session moves players up</div>
+          <div class="promo-used"><span class="promo-used-label">Used in:</span> Email 11 (VIP also in 2)</div>
+        </div>
+        <div class="promo-card">
+          <div class="promo-icon">🎮</div>
+          <div class="promo-name">Clutch Originals, Elite Early Access &amp; Beta Test &amp; Earn Crypto</div>
+          <div class="promo-cadence">Ongoing · bug reports up to $1,000</div>
+          <div class="promo-vertical">Casino</div>
+          <div class="promo-used"><span class="promo-used-label">Used in:</span> Emails 2, 3, 6, 9</div>
+        </div>
+    </div>
+  </div>
+
+  <div class="page-section" id="library">
+    <h2 class="big-title">📚 Template Library</h2>
+    <div class="big-note">All 14 templates, same grouping as the journey map. 12 are live in a flow; 2 are standalone announcements.</div>
+        <div class="section-title">🚀 Onboarding (no deposit yet)</div>
+        <ul class="template-list">
+          <li class="template-item"><a class="template-link" href="welcome-email.html">1. Welcome Email<span class="badge live">Active flow</span>
+            <div class="template-desc">Registration welcome: every player reward unlocked from day one (deposit bonuses, reloads, cashback), plus Racing and Sportsbook.</div></a></li>
+          <li class="template-item"><a class="template-link" href="1hr-no-deposit-reminder.html">2. 1-Hour No-Deposit Reminder<span class="badge live">Active flow</span>
+            <div class="template-desc">Account still unfunded: card &amp; bank deposits via Onramper, Racing Open Beta, Run It Back Monday and Airdrop Season One.</div></a></li>
+          <li class="template-item"><a class="template-link" href="1-day-reminder.html">3. 1-Day No-Deposit Reminder<span class="badge live">Active flow</span>
+            <div class="template-desc">Leads with “Not sure how to deposit?”: card &amp; bank deposits (Onramper), then early-access perks and live promos.</div></a></li>
+          <li class="template-item"><a class="template-link" href="3-day-reminder.html">4. 3-Day No-Deposit Reminder<span class="badge live">Active flow</span>
+            <div class="template-desc">Sportsbook-led: 1,000+ events, combos boosted up to 40%, Daily Super Boosts, Horse Racing and Run It Back Monday.</div></a></li>
+          <li class="template-item"><a class="template-link" href="7-day-reminder.html">5. 7-Day No-Deposit Reminder<span class="badge live">Active flow</span>
+            <div class="template-desc">Last onboarding touch: card &amp; bank deposits remove the crypto barrier, then Deposit Bonuses, Racing and Run It Back Monday.</div></a></li>
+        </ul>
+        <div class="section-title">🎯 Deposit ladder</div>
+        <ul class="template-list">
+          <li class="template-item"><a class="template-link" href="post-ftd-day1-engagement.html">6. Post-FTD Day 1 Engagement<span class="badge live">Active flow</span>
+            <div class="template-desc">What to play first: Clutch Originals, Elite Early Access, Beta Test &amp; Earn Crypto (up to $1,000) and Horse Racing.</div></a></li>
+          <li class="template-item"><a class="template-link" href="post-ftd-day3-engagement.html">7. Post-FTD Day 3 Engagement<span class="badge live">Active flow</span>
+            <div class="template-desc">Builds the habit: Run It Back Monday, Airdrop Season One and Horse Racing.</div></a></li>
+          <li class="template-item"><a class="template-link" href="post-2nd-deposit-milestone.html">9. Post-2nd Deposit Milestone<span class="badge live">Active flow</span>
+            <div class="template-desc">Ecosystem tour: Casino (Originals, live dealer), Sports, Horse Racing and Esports.</div></a></li>
+          <li class="template-item"><a class="template-link" href="post-3rd-deposit-milestone.html">10. Post-3rd Deposit Milestone<span class="badge live">Active flow</span>
+            <div class="template-desc">Sportsbook push: combos boosted up to 40%, 1,000+ events, Horse Racing.</div></a></li>
+          <li class="template-item"><a class="template-link" href="post-4th-deposit-loyalty-milestone.html">11. Post-4th Deposit &amp; Loyalty Milestone<span class="badge live">Active flow</span>
+            <div class="template-desc">Loyalty: Run It Back Monday, Ranked Rewards ladder, Clutch VIP Club (up to 25% cashback) and Horse Racing.</div></a></li>
+        </ul>
+        <div class="section-title">🔄 Reload nudge</div>
+        <ul class="template-list">
+          <li class="template-item"><a class="template-link" href="no-2nd-deposit-nudge.html">8. No 2nd Deposit Nudge<span class="badge live">Active flow</span>
+            <div class="template-desc">For first-time depositors who have played but not reloaded: Deposit Bonuses, card &amp; bank deposits, Run It Back Monday, Racing.</div></a></li>
+        </ul>
+        <div class="section-title">⚠️ Churn risk</div>
+        <ul class="template-list">
+          <li class="template-item"><a class="template-link" href="churn-risk-winback.html">12. Churn-Risk Win-Back<span class="badge live">Active flow</span>
+            <div class="template-desc">Racing Open Beta hero (cash prizes, Pack &amp; referral code drops, bug bounties), then Airdrop Season One, Deposit Bonuses and card &amp; bank deposits.</div></a></li>
+        </ul>
+        <div class="section-title">📣 Standalone announcements</div>
+        <ul class="template-list">
+          <li class="template-item"><a class="template-link" href="card-bank-deposits.html">13. Card &amp; Bank Deposits (Onramper)<span class="badge off">Not in a flow</span>
+            <div class="template-desc">Standalone announcement for card, Apple Pay, Google Pay, Revolut and bank deposits powered by Onramper. Cross-promotes the Horse Racing Open Beta.</div></a></li>
+          <li class="template-item"><a class="template-link" href="horse-racing-open-beta.html">14. Horse Racing Open Beta<span class="badge off">Not in a flow</span>
+            <div class="template-desc">Standalone announcement for the Clutch x Zed Racing Open Beta: cash prizes, Pack &amp; referral code drops, bug bounties.</div></a></li>
+        </ul>
+  </div>
+
+  <div class="page-section" id="segments">
+    <h2 class="big-title">🧩 CRM Segments → Templates</h2>
+    <div class="big-note">All 28 segments in the CRM with their real conditions and member counts as of 12 Oct 2026. The first table holds the 7 segments that drive an active flow.</div>
+    <div class="section-title">Segments with an active flow</div>
+    <div class="table-scroll"><table class="segments-table">
+            <tr><th>Segment</th><th>Condition</th><th class="num">Members</th><th class="num">Added 30d</th><th>Flow → Email</th></tr>
+            <tr><td>New Registrations - Onboarding</td><td>Signed up, registered on or after 29 Jun 2026</td><td class="num">3,118</td><td class="num">2,091</td><td>Onboarding flow → emails 1–5</td></tr>
+            <tr><td>1st Deposit made - Day After</td><td>Exactly 1 deposit, registered on or after 1 Sep 2026</td><td class="num">157</td><td class="num">814</td><td>Emails 6 and 7</td></tr>
+            <tr><td>2nd Deposit made - Day After</td><td>Exactly 2 deposits, registered on or after 1 Sep 2026</td><td class="num">52</td><td class="num">163</td><td>Email 9</td></tr>
+            <tr><td>3rd Deposit made - Day After</td><td>Exactly 3 deposits, registered on or after 1 Aug 2026</td><td class="num">36</td><td class="num">121</td><td>Email 10</td></tr>
+            <tr><td>4th Deposit made - Day After</td><td>Exactly 4 deposits, registered on or after 1 Jul 2026</td><td class="num">44</td><td class="num">124</td><td>Email 11</td></tr>
+            <tr><td>First Time Depositors, Played, No 2nd Deposit</td><td>Exactly 1 deposit, at least 1 bet ever, 5+ days since registration</td><td class="num">553</td><td class="num">151</td><td>Email 8</td></tr>
+            <tr><td>High risk (churn threat)</td><td>2+ deposits, no bet in the last 14 days</td><td class="num">653</td><td class="num">697</td><td>Email 12</td></tr>
+          </table></div>
+    <div class="section-title">Other segments (no active flow)</div>
+    <div class="table-scroll"><table class="segments-table">
+            <tr><th>Segment</th><th>Condition</th><th class="num">Members</th><th class="num">Added 30d</th></tr>
+            <tr><td>Declining</td><td>3+ logins in the last 30 days, no login in the last week</td><td class="num">191</td><td class="num">516</td></tr>
+            <tr><td>Deposited, No Play</td><td>1+ deposit, never placed a bet</td><td class="num">134</td><td class="num">229</td></tr>
+            <tr><td>Low risk (loyal)</td><td>3+ logins in the last 30 days, 5+ deposits, a bet in the last 14 days</td><td class="num">182</td><td class="num">152</td></tr>
+            <tr><td>Reactivated (churned, then returned in last 7 days)</td><td>No bet in the last 60 days and a bet in the last 7 days</td><td class="num">–</td><td class="num">–</td></tr>
+            <tr><td>Inactive 1 (soft churn) (no session 14 days)</td><td>No login in the last 14 days, 2+ logins in total, 1+ deposit</td><td class="num">861</td><td class="num">1,074</td></tr>
+            <tr><td>No 3rd Deposit</td><td>Exactly 2 deposits</td><td class="num">255</td><td class="num">167</td></tr>
+            <tr><td>Active bettors/players</td><td>1+ deposit, logged in and placed a bet in the last 7 days</td><td class="num">317</td><td class="num">496</td></tr>
+            <tr><td>Inactive 2 (churn) (no session 30 days)</td><td>No login in the last 29 days</td><td class="num">5,552</td><td class="num">1,146</td></tr>
+            <tr><td>Dormant (60 days inactivity)</td><td>No login in the last 60 days</td><td class="num">5,183</td><td class="num">1,298</td></tr>
+            <tr><td>Registered, not deposited (RND) - Day 10</td><td>0 deposits</td><td class="num">6,024</td><td class="num">1,935</td></tr>
+            <tr><td>New Sign Ups</td><td>Signed up (ever)</td><td class="num">7,519</td><td class="num">2,089</td></tr>
+            <tr><td>New Verified Players</td><td>Email verified between 29 Oct 2025 and 26 Oct 2026</td><td class="num">4,371</td><td class="num">1,438</td></tr>
+            <tr><td>Registered Players</td><td>Signed up in the last 24 hours</td><td class="num">128</td><td class="num">2,088</td></tr>
+            <tr><td>Logged In Once, No Deposit</td><td>Logged in last week, no bet in the last 7 days</td><td class="num">1,037</td><td class="num">2,559</td></tr>
+            <tr><td>Weekly Logins (5+)</td><td>5+ logins last week</td><td class="num">208</td><td class="num">762</td></tr>
+            <tr><td>Active Players (100+ Bets)</td><td>100+ bets last week</td><td class="num">134</td><td class="num">283</td></tr>
+            <tr><td>FTD_1x</td><td>A deposit and a bet in the last 30 days</td><td class="num">430</td><td class="num">327</td></tr>
+            <tr><td>Deposited 3+ Times</td><td>3+ deposits (ever)</td><td class="num">775</td><td class="num">123</td></tr>
+            <tr><td>Deposited but did not bet (30-days)</td><td>A deposit in the last 30 days, no bet in the last 30 days</td><td class="num">52</td><td class="num">254</td></tr>
+            <tr><td>Inactive Players - 30+ Days AFK</td><td>No login in the last 30 days</td><td class="num">5,538</td><td class="num">1,173</td></tr>
+            <tr><td>adas</td><td>Affiliate ID kg0JLRQd</td><td class="num">922</td><td class="num">6</td></tr>
+          </table></div>
+  </div>
+
+  <div class="footer">
+    Flows, segments and email stats checked in the RapidPace CRM on 12 Oct 2026.<br>
+    © 2026 Clutch.app • All rights reserved.
+  </div>
+
+</div>
+</body>
+</html>
